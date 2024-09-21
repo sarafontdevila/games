@@ -1,1 +1,68 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+#options {
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+.choices {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+#options button {
+  display: inline-block;
+  color: black;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+  background-color: rgb(37, 235, 19);
+  cursor: pointer;
+  border-radius: 250;
+  transition: background-color 0.5s ease;
+}
+img .rock {
+  width: 10px;
+  height: 10px;
+}
+
+button {
+  font-size: 7.5rem;
+  min-width: 160px;
+  margin: 0 10px;
+  border-radius: 250px;
+  background-color: rgb(139, 178, 137);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+button:hover {
+  background-color: rgb(170, 236, 236);
+}
+
+#player,
+#computer {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 50px 10px;
+}
+#result {
+  font-size: 2rem;
+  margin: 50px 10px;
+}
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}

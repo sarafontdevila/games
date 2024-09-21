@@ -1,20 +1,19 @@
 header {
   display: flex;
-  height: 10svh;
-  padding: 10%;
+  padding: 5%;
   justify-content: space-around;
   align-items: center;
+  background-color: rgb(194, 241, 210);
 }
 
 header button {
   padding: 10px 20px;
-  width: 200px;
+  width: 80px;
   height: 50px;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 15px;
   color: black;
-  background-color: rgb(129, 227, 162);
-  border: 3px solid black;
+  border: 0.5px solid black;
   cursor: pointer;
 }
 @media (max-width: 500px) {

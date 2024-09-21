@@ -2,6 +2,11 @@ import './crush.css'
 let Count = 0
 let stopped = true
 let rangevalid = null
+
+const savedCount = localStorage.getItem('crushScore')
+if (savedCount !== null) {
+  Count = parseInt(savedCount, 10)
+}
 export const initCrush = () => {
   const divContent = document.querySelector('.content')
 
@@ -76,6 +81,7 @@ const catchPumpkin = (event) => {
   audio.play()
   Count++
   updateContador(Count)
+  localStorage.setItem('crushScore', Count)
 
   const carrito = document.querySelector('.carrito')
   const pumpkin = event.target
@@ -99,15 +105,6 @@ const startGame = () => {
     }, 20000)
   }
 }
-/*let rangevalid
-  rangevalid = setInterval(() => {
-    createPumpkin()
-  }, 1500)*/
-
-/*setTimeout(() => {
-    clearInterval(rangevalid)
-    alert('Game is over!')
-  }, 20000)*/
 
 const stopGame = () => {
   if (rangevalid) {

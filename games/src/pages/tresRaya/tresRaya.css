@@ -1,7 +1,7 @@
 button {
   width: 200px;
   height: 200px;
-  background-color: black;
+  background-color: #ebe2e2;
   color: white;
   font-size: 20px;
   border-radius: 10px;
@@ -10,7 +10,7 @@ button {
 }
 .content {
   display: grid;
-  grid-template-columns: 1fr 1 fr 1 fr;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 600px;
   margin: auto;
 }

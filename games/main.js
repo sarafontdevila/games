@@ -2,6 +2,7 @@ import './style.css'
 import { Header } from './src/components/Header/Header.js'
 import { initCrush } from './src/pages/crush/crush.js'
 import { initTresRaya } from './src/pages/tresRaya/tresRaya.js'
+import { initRock } from './src/pages/rock/rock.js'
 
 const divApp = document.querySelector('#app')
 Header(divApp)
