@@ -32,7 +32,6 @@ export const initCrush = () => {
     stopped = true
     toggleButton(play, stop)
     stopGame()
-    /*clearInterval(rangevalid)*/
   })
   toggleButton(play, stop)
 

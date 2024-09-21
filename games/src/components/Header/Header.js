@@ -1,7 +1,7 @@
 import './Header.css'
 import { initCrush } from '../../pages/crush/crush.js'
 import { initRock } from '../../pages/rock/rock.js'
-import { initGame3 } from '../../pages/game3/game3.js'
+import { inittresRaya } from '../../pages/tresRaya/tresRaya.js'
 
 export const Header = (divApp) => {
   const header = document.createElement('header')
