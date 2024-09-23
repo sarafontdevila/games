@@ -25,6 +25,7 @@ const clicked = (e, pos) => {
     resetGame()
   }
 }
+
 const winner = () => {
   const winningCombinations = [
     [0, 1, 2],

@@ -49,15 +49,6 @@ export const initCrush = () => {
   createPumpkin()
 }
 
-rangevalid = setInterval(() => {
-  createPumpkin()
-}, 1500)
-
-setTimeout(() => {
-  clearInterval(rangevalid)
-  alert('Game is over!')
-}, 20000)
-
 const createPumpkin = () => {
   const divContent = document.querySelector('.content')
   let randomLeft = Math.random() * (window.innerWidth - 100)
@@ -71,7 +62,9 @@ const createPumpkin = () => {
   imgPumpkin.src = './assets/crush/pumpkin.png'
 
   imgPumpkin.addEventListener('click', (event) => {
-    catchPumpkin(event)
+    if (!stopped) {
+      catchPumpkin(event)
+    }
   })
 
   divContent.append(imgPumpkin)
