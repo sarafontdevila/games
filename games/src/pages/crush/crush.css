@@ -24,10 +24,11 @@
 .crushButton {
   position: absolute;
   top: 200px;
-  right: 50px;
+  right: 190px;
   cursor: pointer;
   border-radius: 10px;
   border: 3px solid black;
+  display: none;
   padding: 0px 0px;
   background-color: transparent;
   display: none;

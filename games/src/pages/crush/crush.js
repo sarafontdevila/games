@@ -92,18 +92,19 @@ const startGame = () => {
     rangevalid = setInterval(() => {
       createPumpkin()
     }, 1500)
-    setTimeout(() => {
+    /*setTimeout(() => {
       stopGame()
       alert('Game is over!')
-    }, 20000)
+    }, 20000)*/
   }
 }
 
-const stopGame = () => {
+export const stopGame = () => {
   if (rangevalid) {
     clearInterval(rangevalid)
     rangevalid = null
   }
+  stopped = true
 }
 
 const toggleButton = (play, stop) => {

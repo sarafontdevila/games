@@ -1,5 +1,8 @@
 import './Header.css'
-import { initCrush } from '../../pages/crush/crush.js'
+import {
+  initCrush,
+  stopGame as stopCrushGame
+} from '../../pages/crush/crush.js'
 import { initRock } from '../../pages/rock/rock.js'
 import { initTresRaya } from '../../pages/tresRaya/tresRaya.js'
 
@@ -14,12 +17,15 @@ export const Header = (divApp) => {
   buttonTresRaya.textContent = 'TresRaya'
 
   buttonCrush.addEventListener('click', () => {
+    stopAllGames()
     initCrush()
   })
   buttonRock.addEventListener('click', () => {
+    stopAllGames()
     initRock()
   })
   buttonTresRaya.addEventListener('click', () => {
+    stopAllGames()
     initTresRaya()
   })
 
@@ -27,4 +33,7 @@ export const Header = (divApp) => {
   header.append(buttonRock)
   header.append(buttonTresRaya)
   divApp.append(header)
+}
+const stopAllGames = () => {
+  stopCrushGame()
 }

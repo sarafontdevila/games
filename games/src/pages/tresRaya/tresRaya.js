@@ -5,10 +5,11 @@ export const initTresRaya = () => {
   divContent.innerHTML = ''
   for (let i = 0; i < 9; i++) {
     const button = document.createElement('button')
+    button.classList.add('tresraya-button')
     divContent.appendChild(button)
   }
   document
-    .querySelectorAll('button')
+    .querySelectorAll('.tresraya-button')
     .forEach((obj, i) => obj.addEventListener('click', (e) => clicked(e, i)))
 }
 let turn = 0
@@ -22,6 +23,9 @@ const clicked = (e, pos) => {
   tablero[pos] = color
   if (winner()) {
     alert('Great job, you won!' + color)
+    resetGame()
+  } else if (turn === 9) {
+    alert('Tie game')
     resetGame()
   }
 }
@@ -46,7 +50,7 @@ const winner = () => {
 const resetGame = () => {
   turn = 0
   tablero.fill(null)
-  document.querySelectorAll('button').forEach((button) => {
+  document.querySelectorAll('.tresraya-button').forEach((button) => {
     button.style.backgroundColor = ''
   })
 }
