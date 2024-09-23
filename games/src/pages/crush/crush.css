@@ -46,4 +46,12 @@
     top: 100px;
     right: 0px;
   }
+
+  .crushButton {
+    top: 200px;
+    right: 30%;
+    font-size: small;
+    height: 50px;
+    width: 80px;
+  }
 }
