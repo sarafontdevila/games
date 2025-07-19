@@ -1,4 +1,7 @@
 import './crush.css'
+import '../../components/GameButton/GameButton.css'
+import { gameButton } from '../../components/GameButton/GameButton.js'
+
 let Count = 0
 let stopped = true
 let rangevalid = null
@@ -14,30 +17,35 @@ export const initCrush = () => {
 
   const carrito = document.createElement('img')
   const textConta = document.createElement('h2')
-  const play = document.createElement('button')
-  const stop = document.createElement('button')
   const audio = document.createElement('audio')
+
+  const play = gameButton({
+    text: 'Play',
+    className: 'crushButton',
+    onClick: () => {
+      stopped = false
+      toggleButton(play, stop)
+      startGame()
+    }
+  })
+
+  const stop = gameButton({
+    text: 'Stop',
+    className: 'crushButton',
+    onClick: () => {
+      stopped = true
+      toggleButton(play, stop)
+      stopGame()
+    }
+  })
+
 
   audio.src = './assets/crush/catch.mp3'
   textConta.textContent = Count
   textConta.className = 'contador'
   carrito.className = 'carrito'
   carrito.src = './assets/crush/carrito.png'
-  play.textContent = 'Play'
-  stop.textContent = 'Stop'
-  play.className = 'crushButton'
-  stop.className = 'crushButton'
 
-  play.addEventListener('click', () => {
-    stopped = false
-    toggleButton(play, stop)
-    startGame()
-  })
-  stop.addEventListener('click', () => {
-    stopped = true
-    toggleButton(play, stop)
-    stopGame()
-  })
   toggleButton(play, stop)
 
   divContent.append(audio)
@@ -92,10 +100,7 @@ const startGame = () => {
     rangevalid = setInterval(() => {
       createPumpkin()
     }, 1500)
-    /*setTimeout(() => {
-      stopGame()
-      alert('Game is over!')
-    }, 20000)*/
+    
   }
 }
 
