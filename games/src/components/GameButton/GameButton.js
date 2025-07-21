@@ -1,5 +1,4 @@
 
-
 export function gameButton({ text, className = '', onClick }) {
   const button = document.createElement('button')
   button.textContent = text

@@ -1,5 +1,4 @@
 import './crush.css'
-import '../../components/GameButton/GameButton.css'
 import { gameButton } from '../../components/GameButton/GameButton.js'
 
 let Count = 0

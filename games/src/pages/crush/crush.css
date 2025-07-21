@@ -21,7 +21,7 @@
   z-index: 999999999;
 }
 
-.crushButton {
+/*.crushButton {
   position: absolute;
   top: 200px;
   right: 190px;
@@ -36,6 +36,22 @@
   height: 40px;
   width: 60px;
   font-size: 15px;
+  
+}*/
+.crushButton{
+  position: absolute;
+  top: 200px;
+  left: 190px;
+  padding: 10px 20px;
+  width: 80px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #b5c9b0;
+  font-size: 15px;
+  color: black;
+  border: 0.5px solid black;
+  cursor: pointer;
+  display: none;
 }
 
 .show {
@@ -48,10 +64,11 @@
   }
 
   .crushButton {
-    top: 200px;
-    right: 30%;
+    top: 300px;
     font-size: small;
     height: 50px;
     width: 80px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
