@@ -7,9 +7,9 @@ export const initRock = () => {
   divContent.innerHTML =
     '<div id="options" class="game-container">' +
     '<div id="options" class="choices">' +
-    '<button onclick="playGame(\'rock\')"> ROCK</button>' +
-    '<button onclick="playGame(\'paper\')"> PAPER</button>' +
-    '<button onclick="playGame(\'scissors\')"> SCISSORS</button>' +
+    '<button class="btn-rockGame" onclick="playGame(\'rock\')"> ROCK</button>' +
+    '<button class="btn-rockGame" onclick="playGame(\'paper\')"> PAPER</button>' +
+    '<button class="btn-rockGame" onclick="playGame(\'scissors\')"> SCISSORS</button>' +
     '</div>' +
     '<div id="player">PLAYER: </div>' +
     '<div id="computer">COMPUTER: </div>' +

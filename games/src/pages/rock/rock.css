@@ -1,94 +1,212 @@
-.content {
+
+
+.game-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
 }
 
 #options {
   margin-bottom: 20px;
-  margin-top: 50px;
+  margin-top: 20px;
+  width:100%;
 }
 
 h1 {
   font-size: 30px;
   font-weight: bold;
   color: black;
+  text-align: center;
+  margin: 20px 0;
 }
 .choices {
   display: flex;
   justify-content: center;
-  margin-bottom: 3.5rem;
-}
-#options button {
-  display: inline-block;
-  color: black;
-  padding: 10px 20px;
-  font-size: 15px;
-  cursor: pointer;
-  margin: 10px;
-  background-color: rgb(37, 235, 19);
-  cursor: pointer;
-  border-radius: 250;
-  transition: background-color 0.5s ease;
-}
-img .rock {
-  width: 10px;
-  height: 10px;
-}
-
-button {
-  font-size: 7.5rem;
-  min-width: 160px;
-  margin: 0 10px;
-  border-radius: 250px;
-  background-color: rgb(139, 178, 137);
-  cursor: pointer;
-  transition: background-color 0.5s ease;
-}
-button:hover {
-  background-color: rgb(170, 236, 236);
-}
-
-#player,
-#computer {
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 50px 10px;
-}
-#result {
-  font-size: 2rem;
-  margin: 50px 10px;
-}
-#game-container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-top: 80px;
+  margin-bottom: 2rem;
+  gap: 15px; 
+  width:100%;
 }
-@media (max-width: 768px) {
-  h1 {
-    font-size: 25px;
-  }
 
+.btn-rockGame{
+  font-size: 1rem;
+  width: 150px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: rgb(158, 200, 156);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  color:black;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-rockGame:hover {
+  background-color: rgb(170, 236, 236);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-rockGame:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.game-container #player,
+.game-container #computer,
+.game-container #result {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin: 10px 5px;
+  flex: 1;
+}
+
+.game-container #result {
+  color: #288f03;
+  font-size: 1.2rem;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .content {
+    padding: 15px;
+  }
+  
+  .game-container {
+    padding: 15px;
+    max-width: 100%;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin: 15px 0;
+  }
+  
   .choices {
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
+    margin-bottom: 2rem;
   }
-
-  #options button {
-    margin-bottom: 10px;
-    margin-left: 100px;
+  
+  .btn-rockGame {
+    font-size: 0.9rem;
+    width: 200px;
+    height: 45px;
   }
-
-  button {
-    font-size: 5rem;
+  
+  #options {
+    margin-top: 20px;
   }
+  
+  .game-container #player,
+  .game-container #computer,
+  .game-container #result {
+    font-size: 0.9rem;
+    margin: 8px 3px;
+  }
+  
+  .game-container #result {
+    font-size: 1rem;
+  }
+}
 
-  #player,
-  #computer,
-  #result {
+@media (max-width: 480px) {
+  .content {
+    padding: 10px;
+  }
+  
+  .game-container {
+    padding: 10px;
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .choices {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  
+  .btn-rockGame {
     font-size: 0.8rem;
-    margin-left: 50px;
+    width: 90%;
+    max-width: 250px;
+    height: 40px;
+    margin: 0 auto;
+  }
+  
+  #options {
+    margin-top: 15px;
+    width: 100%;
+  }
+  
+  .game-container > div:last-child {
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 15px;
+  }
+  
+  .game-container #player,
+  .game-container #computer,
+  .game-container #result {
+    font-size: 0.8rem;
+    margin: 5px 0;
+    width: 100%;
+  }
+  
+  .game-container #result {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .content {
+    padding: 8px;
+  }
+  
+  .game-container {
+    padding: 8px;
+  }
+  
+  .btn-rockGame {
+    font-size: 0.75rem;
+    width: 95%;
+    max-width: 200px;
+    height: 38px;
+  }
+  
+  .choices {
+    gap: 10px;
+  }
+  
+  .game-container #player,
+  .game-container #computer,
+  .game-container #result {
+    font-size: 0.75rem;
+    margin: 4px 0;
+  }
+  
+  .game-container #result {
+    font-size: 0.8rem;
+  }
+  
+  h1 {
+    font-size: 18px;
   }
 }

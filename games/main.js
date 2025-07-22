@@ -11,3 +11,4 @@ divContent.className = 'content'
 
 divApp.append(divContent)
 initCrush()
+

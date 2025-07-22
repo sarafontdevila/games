@@ -5,108 +5,45 @@
   background-color: #ebe2e2;
   border: 3px solid black;
   border-radius: 10px;
-  margin: 0;
   border: 3px solid black;
   cursor: pointer;
-  font-size: 5vw;
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4px;
-  width: 90vw;
-  max-width: 400px;
-  margin:0 auto;
-  padding: 4px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  box-sizing: border-box;
-  border: 1px solid #ccc; 
-}
-
-@media (max-width: 600px) {
-  .tresraya-button {
-    font-size: 6vw;
-    .tresraya-button {
-  width: 100%;
-  aspect-ratio: 1; 
-  background-color: #ebe2e2;
-  border: 3px solid black;
-  border-radius: 10px;
-  margin: 0;
-  border: 3px solid black;
-  cursor: pointer;
   font-size: 5vw;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
 }
 
-.content {
+.content{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4px;
-  width: 90vw;
-  max-width: 400px;
-  margin:0 auto;
-  padding: 4px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  box-sizing: border-box;
-  border: 1px solid #ccc; 
+  gap:5px;
+  
+}
+.tresraya-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;  
   background-color: red;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .tresraya-button {
-    font-size: 6vw;;
-
+    font-size: 8vw;
   }
-  .content {
-    width: 80vw;
-    gap: 3px;
-    padding: 3px;
-
+  .tresraya-grid {
+    gap: 6px;
   }
 }
 @media (max-width: 350px) {
   .tresraya-button {
     font-size: 14px;
     border-width: 1px;
-    
+    border-radius: 5px;
   }
-  
-  .content {
-    width: 70vw;
-    gap: 2px;
-    padding: 2px;
-  }
-}
-
-
-  }
-  .content {
-    
+  .tresraya-grid {
     gap: 3px;
-    padding: 3px;
-
-
   }
 }
-@media (max-width: 350px) {
-  .tresraya-button {
-    font-size: 14px;
-    border-width: 1px;
-  }
-  
-  .content {
-    gap: 2px;
-    padding: 2px;
-  }
-}
+
+
